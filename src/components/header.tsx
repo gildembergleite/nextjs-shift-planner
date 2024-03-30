@@ -5,8 +5,10 @@ import { ToggleTheme } from './toggle-theme'
 
 export function Header(props: HomePageTranslations) {
   return (
-    <header className="flex w-full justify-between items-center pt-16 px-12">
-      <h1 className="font-bold text-4xl">{props.title}</h1>
+    <header className="flex flex-col md:flex-row w-full justify-between items-center pt-8 md:pt-16 md:px-12 gap-8">
+      <h1 className="text-center md:text-left font-bold text-4xl px-3 md:px-0">
+        {props.title}
+      </h1>
       <div className="flex items-center gap-4">
         <ChangeDateButton title={props.changeDateButtonLabel} />
         <ToggleTheme
