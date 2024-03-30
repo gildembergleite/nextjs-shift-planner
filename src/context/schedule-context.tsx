@@ -1,3 +1,5 @@
+'use client'
+
 import { createContext, ReactNode, useEffect, useState } from 'react'
 
 interface ScheduleContextProps {
@@ -13,7 +15,9 @@ export function ScheduleProvider({ children }: { children: ReactNode }) {
   const [schedule, setSchedule] = useState<Date[]>([])
 
   const [startDate, setStartDate] = useState(
-    localStorage.getItem('initialScheduleDate'),
+    typeof window !== 'undefined'
+      ? localStorage.getItem('initialScheduleDate')
+      : null,
   )
 
   function handleSaveInitialScheduleDate(confirm: boolean) {
