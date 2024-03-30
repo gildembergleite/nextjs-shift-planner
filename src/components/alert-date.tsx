@@ -3,6 +3,7 @@
 import {
   AlertDialog,
   AlertDialogAction,
+  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
@@ -25,11 +26,11 @@ export function AlertDate() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogAction
+          <AlertDialogCancel
             onClick={() => handleSaveInitialScheduleDate(false)}
           >
             NO
-          </AlertDialogAction>
+          </AlertDialogCancel>
           <AlertDialogAction
             onClick={() => handleSaveInitialScheduleDate(true)}
           >

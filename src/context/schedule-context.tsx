@@ -19,13 +19,19 @@ export function ScheduleProvider({ children }: { children: ReactNode }) {
   function handleSaveInitialScheduleDate(confirm: boolean) {
     if (typeof window === 'undefined') return
 
+    const today = new Date()
+
     if (confirm) {
-      const today = new Date().toString()
-      localStorage.setItem('initialScheduleDate', today)
-      setStartDate(today)
+      localStorage.setItem('initialScheduleDate', today.toString())
+      setStartDate(today.toString())
       return
     }
-    const tomorrow = (new Date().getDate() + 1).toString()
+    const tomorrow = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate() + 1,
+    ).toString()
+
     localStorage.setItem('initialScheduleDate', tomorrow)
     setStartDate(tomorrow)
   }
