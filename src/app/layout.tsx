@@ -11,8 +11,7 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'Boilerplate NextJS',
-  description: 'With shadcn/ui and husky configured',
+  title: 'Shift Planner',
 }
 
 interface RootLayoutProps {
