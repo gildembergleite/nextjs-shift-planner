@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "title": "Planejador de Turnos",
+    "changeDateButtonLabel": "Alterar data",
+    "lightThemeLabel": "Claro",
+    "darkThemeLabel": "Escuro",
+    "systemThemeLabel": "Sistema",
+    "languagePtLabel": "Português (BR)",
+    "languageEnLabel": "Inglês",
+    "alertDateTitle": "Você vai trabalhar hoje?",
+    "alertDateDescription": "Para configurar seu cronograma de 12/36, precisamos saber se você vai trabalhar hoje.",
+    "alertDateCancelButtonLabel": "Não",
+    "alertDateConfirmButtonLabel": "Sim"
+  }
+}

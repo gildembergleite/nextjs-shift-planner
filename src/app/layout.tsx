@@ -17,11 +17,16 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: ReactNode
+
+  params: { locale: string }
 }
 
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+export default function RootLayout({
+  children,
+  params: { locale },
+}: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',

@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "title": "Shift Planner",
+    "changeDateButtonLabel": "Change date",
+    "lightThemeLabel": "Light",
+    "darkThemeLabel": "Dark",
+    "systemThemeLabel": "System",
+    "languagePtLabel": "Portuguese BR",
+    "languageEnLabel": "English",
+    "alertDateTitle": "Are you going to work today?",
+    "alertDateDescription": "To set up your 12/36 schedule, we need to know if you are going to work today.",
+    "alertDateCancelButtonLabel": "No",
+    "alertDateConfirmButtonLabel": "Yes"
+  }
+}
