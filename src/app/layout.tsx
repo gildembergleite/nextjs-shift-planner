@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import { ReactNode } from 'react'
 import './globals.css'
+import { Provider } from './provider'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -27,7 +28,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           fontSans.variable,
         )}
       >
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   )
