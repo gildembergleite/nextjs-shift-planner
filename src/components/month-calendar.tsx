@@ -2,12 +2,14 @@
 
 import { Calendar } from '@/components/ui/calendar'
 import { useSchedule } from '@/hooks/use-schedule'
+import { enUS, ptBR } from 'date-fns/locale'
 
 interface MonthCalendarProps {
   defaultMonth: number
+  locale: string
 }
 
-export function MonthCalendar({ defaultMonth }: MonthCalendarProps) {
+export function MonthCalendar({ defaultMonth, locale }: MonthCalendarProps) {
   const { schedule } = useSchedule()
   const currentYear = new Date().getFullYear()
 
@@ -21,6 +23,7 @@ export function MonthCalendar({ defaultMonth }: MonthCalendarProps) {
 
   return (
     <Calendar
+      locale={locale === 'pt' ? ptBR : enUS}
       selected={separateScheduleByMonth()}
       disabled
       defaultMonth={new Date(currentYear, defaultMonth)}

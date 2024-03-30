@@ -1,5 +1,6 @@
 'use client'
 
+import { HomePageTranslations } from '@/app/[locale]/(home)/page'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,29 +13,28 @@ import {
 } from '@/components/ui/alert-dialog'
 import { useSchedule } from '@/hooks/use-schedule'
 
-export function AlertDate() {
+export function AlertDate(props: HomePageTranslations) {
   const { startDate, handleSaveInitialScheduleDate } = useSchedule()
 
   return (
     <AlertDialog open={!startDate}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you going to work today?</AlertDialogTitle>
+          <AlertDialogTitle>{props.alertDateTitle}</AlertDialogTitle>
           <AlertDialogDescription>
-            To set up your 12/36 schedule, we need to know if you are going to
-            work today.
+            {props.alertDateDescription}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel
             onClick={() => handleSaveInitialScheduleDate(false)}
           >
-            NO
+            {props.alertDateCancelButtonLabel}
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={() => handleSaveInitialScheduleDate(true)}
           >
-            YES
+            {props.alertDateConfirmButtonLabel}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
